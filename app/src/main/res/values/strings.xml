@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Movie Catalogue</string>
+    <string name="change_language">Change Language</string>
+    <string name="firsttab">Movie</string>
+    <string name="secondtab">TV</string>
+    <string name="favorite">Favorite</string>
+    <string name="addfavorite">Added to favorite</string>
+    <string name="removefavorite">Removed from favorite</string>
+    <string name="language">en-US</string>
+</resources>

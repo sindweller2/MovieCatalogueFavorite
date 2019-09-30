@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Katalog Film</string>
+    <string name="change_language">Ganti Bahasa</string>
+    <string name="firsttab">Film</string>
+    <string name="secondtab">Televisi</string>
+    <string name="favorite">Favorit</string>
+    <string name="addfavorite">Data sudah ditambahkan ke favorit</string>
+    <string name="removefavorite">Data sudah dihapuskan dari favorit</string>
+    <string name="language">id-ID</string>
+</resources>
