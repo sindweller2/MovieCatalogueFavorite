@@ -3,7 +3,6 @@ package submission4.moviecataloguefavorite;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
 import static submission4.moviecataloguefavorite.TVDatabaseContract.TVDatabaseColumns.table_name;
 
 public class TVDatabaseHelper extends SQLiteOpenHelper {

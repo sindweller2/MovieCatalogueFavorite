@@ -5,9 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
 import java.util.ArrayList;
-
 import static submission4.moviecataloguefavorite.TVDatabaseContract.TVDatabaseColumns.first_air_date;
 import static submission4.moviecataloguefavorite.TVDatabaseContract.TVDatabaseColumns.name;
 import static submission4.moviecataloguefavorite.TVDatabaseContract.TVDatabaseColumns.overview;
@@ -86,7 +84,7 @@ public class TVFavoriteHelper {
         sqLiteDatabase = tvDatabaseHelper.getReadableDatabase();
 
         String selection = id + " = ?";
-        String[] selectionArgs = { tv_id };
+        String[] selectionArgs = {tv_id};
 
         Cursor cursor = sqLiteDatabase.query(DATABASE_TABLE, null,
                 selection,
@@ -129,11 +127,11 @@ public class TVFavoriteHelper {
         args.put(poster_path, tvModel.getPoster_path());
         args.put(vote_average, tvModel.getVote_average());
         args.put(first_air_date, tvModel.getFirst_air_date());
-         sqLiteDatabase.insert(DATABASE_TABLE, null, args);
+        sqLiteDatabase.insert(DATABASE_TABLE, null, args);
     }
 
     public void deleteTV(String tv_id) {
         sqLiteDatabase = tvDatabaseHelper.getWritableDatabase();
-         sqLiteDatabase.delete(table_name, id + " = '" + tv_id + "'", null);
+        sqLiteDatabase.delete(table_name, id + " = '" + tv_id + "'", null);
     }
 }

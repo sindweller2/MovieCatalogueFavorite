@@ -2,12 +2,9 @@ package submission4.moviecataloguefavorite;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-
-import android.content.Intent;
 import android.database.sqlite.SQLiteConstraintException;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.bumptech.glide.Glide;
 
 public class TVDetailActivity extends AppCompatActivity {
@@ -82,7 +78,7 @@ public class TVDetailActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void favoriteState(){
+    public void favoriteState() {
         TVModel tvModel = getIntent().getParcelableExtra(tv);
         tvAdapter.setData(tvFavoriteHelper.selectTV(tvModel.getId().toString()));
 

@@ -3,11 +3,9 @@ package submission4.moviecataloguefavorite;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
-
 import static submission4.moviecataloguefavorite.MovieDatabaseContract.MovieDatabaseColumns.id;
 import static submission4.moviecataloguefavorite.MovieDatabaseContract.MovieDatabaseColumns.overview;
 import static submission4.moviecataloguefavorite.MovieDatabaseContract.MovieDatabaseColumns.poster_path;
@@ -86,7 +84,7 @@ public class MovieFavoriteHelper {
         sqLiteDatabase = movieDatabaseHelper.getReadableDatabase();
 
         String selection = id + " = ?";
-        String[] selectionArgs = { movie_id };
+        String[] selectionArgs = {movie_id};
 
         Cursor cursor = sqLiteDatabase.query(DATABASE_TABLE, null,
                 selection,

@@ -2,13 +2,9 @@ package submission4.moviecataloguefavorite;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-
-import android.content.Intent;
 import android.database.sqlite.SQLiteConstraintException;
-import android.database.sqlite.SQLiteQueryBuilder;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.bumptech.glide.Glide;
 
 public class MovieDetailActivity extends AppCompatActivity {
@@ -83,7 +78,7 @@ public class MovieDetailActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void favoriteState(){
+    public void favoriteState() {
         MovieModel movieModel = getIntent().getParcelableExtra(movie);
         movieAdapter.setData(movieFavoriteHelper.selectMovie(movieModel.getId().toString()));
 
@@ -102,7 +97,7 @@ public class MovieDetailActivity extends AppCompatActivity {
     private void addToFavorite() {
         try {
             MovieModel movieModel = getIntent().getParcelableExtra(movie);
-             movieFavoriteHelper.insertMovie(movieModel);
+            movieFavoriteHelper.insertMovie(movieModel);
             Toast.makeText(this, getResources().getString(R.string.addfavorite), Toast.LENGTH_SHORT).show();
         } catch (SQLiteConstraintException e) {
             Toast.makeText(this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();

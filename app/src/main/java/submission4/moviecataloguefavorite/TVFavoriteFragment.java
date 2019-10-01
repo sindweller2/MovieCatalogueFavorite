@@ -3,18 +3,15 @@ package submission4.moviecataloguefavorite;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
-
 import java.util.ArrayList;
 
 public class TVFavoriteFragment extends Fragment {
@@ -26,14 +23,11 @@ public class TVFavoriteFragment extends Fragment {
     private TVFavoriteHelper tvFavoriteHelper;
 
     public TVFavoriteFragment() {
-        // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_tv_favorite, container, false);
     }
 
@@ -68,7 +62,7 @@ public class TVFavoriteFragment extends Fragment {
         new LoadTVFavoriteData().execute();
     }
 
-        @Override
+    @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putParcelableArrayList(EXTRA_STATE, tvAdapter.getTvModels());
